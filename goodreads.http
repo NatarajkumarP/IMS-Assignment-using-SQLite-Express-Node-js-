@@ -1,0 +1,81 @@
+#Register User 
+POST http://localhost:3000/register/
+Content-Type: application/json 
+{
+  "username": "natarajkumarp",
+  "password": "nataraj@2001",
+  "name": "Nataraj kumarP",
+  "gender": "male"
+}
+
+
+#Login User
+POST http://localhost:3000/login/
+Content-Type: application/json 
+{
+  "username":"natarajkumarp",
+  "password":"nataraj@2001"
+}
+
+
+#User Profile 
+GET http://localhost:3000/profile/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwidXNlcklkIjoyLCJpYXQiOjE3MjQwNTQwODB9.Ef-5heomrim-vme9FMzCtzJhwumpiCd5JECDPfb55X8
+
+
+#Get All Book API 
+GET http://localhost:3000/books/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwidXNlcklkIjoyLCJpYXQiOjE3MjQwNTQwODB9.Ef-5heomrim-vme9FMzCtzJhwumpiCd5JECDPfb55X8
+
+
+#Get Book API 
+GET http://localhost:3000/books/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwidXNlcklkIjoyLCJpYXQiOjE3MjQwNTQwODB9.Ef-5heomrim-vme9FMzCtzJhwumpiCd5JECDPfb55X8
+
+
+#Add Book API 
+POST http://localhost:3000/books/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwidXNlcklkIjoyLCJpYXQiOjE3MjQwNTQwODB9.Ef-5heomrim-vme9FMzCtzJhwumpiCd5JECDPfb55X8
+{
+  "title": "Harry Potter and the Order of the Phoenix",
+  "authorId": 1,
+  "rating": 4.62,
+  "ratingCount": 126559,
+  "reviewCount": 611,
+  "description": "There is a door at the end of a silent corridor.",
+  "pages": 352,
+  "dateOfPublication": "May 1st 2003",
+  "editionLanguage": "English",
+  "price": 850,
+  "onlineStores": "Amazon,Audible,Indigo,Apple Books,Google Play,IndieBound"
+}
+
+
+#Update Book API 
+PUT http://localhost:3000/books/41/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwidXNlcklkIjoyLCJpYXQiOjE3MjQwNTQwODB9.Ef-5heomrim-vme9FMzCtzJhwumpiCd5JECDPfb55X8
+{
+  "title": "Harry Potter and the Order of the Phoenix",
+  "authorId": 1,
+  "rating": 5,
+  "ratingCount": 1000000,
+  "reviewCount": 711,
+  "description": "There is a door at the end of a silent corridor.",
+  "pages": 352,
+  "dateOfPublication": "May 1st 2003",
+  "editionLanguage": "English",
+  "price": 850,
+  "onlineStores": "Amazon,Audible,Indigo,Apple Books,Google Play,IndieBound"
+}
+
+
+#Delete Book API 
+DELETE http://localhost:3000/books/41/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwidXNlcklkIjoyLCJpYXQiOjE3MjQwNTQwODB9.Ef-5heomrim-vme9FMzCtzJhwumpiCd5JECDPfb55X8
+
+
+#Get Authors Book API 
+GET http://localhost:3000/authors/1/books/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwidXNlcklkIjoyLCJpYXQiOjE3MjQwNTQwODB9.Ef-5heomrim-vme9FMzCtzJhwumpiCd5JECDPfb55X8
